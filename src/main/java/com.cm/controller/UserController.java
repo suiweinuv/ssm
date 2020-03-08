@@ -2,6 +2,8 @@ package com.cm.controller;
 
 import com.cm.model.UserModel;
 import com.cm.service.UserService;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +16,8 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 	private UserService userService;
+	private static final Logger logger = LogManager.getLogger(UserController.class);
+
 	@Autowired
 	public UserController(UserService userService) {
 		this.userService = userService;
@@ -23,6 +27,8 @@ public class UserController {
 	@ResponseBody
 	public List<UserModel> getAllUsers() {
 		List<UserModel> userModels = userService.getAllUsers();
+		logger.info(userModels);
+
 		return userModels;
 	}
 
@@ -30,6 +36,7 @@ public class UserController {
 	@ResponseBody
 	public UserModel getUser(String id) {
 		UserModel userModel = userService.getUser(id);
+
 		return userModel;
 	}
 }
