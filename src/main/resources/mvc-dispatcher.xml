@@ -25,9 +25,11 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--静态资源默认servlet配置
-        (1)加⼊对静态资源的处理： js,gif,png
-        (2)允许使⽤"/"做整体映射
-    -->
-    <mvc:default-servlet-handler/>
+
+
+    <mvc:resources location="/img/" mapping="/img/**"/>
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/html/" mapping="/html/**"/>
+
 </beans>

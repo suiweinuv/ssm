@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+<input 	id="123" type="submit" >
+</body>
+<script src=""></script>
+<script type="text/javascript">
+    $("#123").click(function() {
+        $.ajax({
+            type: "POST",
+            url: "http://10.1.89.156:9080/chatClient/hf/auth/produceAuth",
+            contentType: "application/json",
+            /* data: JSON.stringify(GetJsonData()),*/
+            data:{
+                "customerSessionId": "JVHXBBEAJCHJERGZDUBOJBHUAHFICBGWIVANGIFF",
+                "customerId": "7800071499",
+                "channel": "a"
+            },
+            /* dataType: "json",*/
+            success: function (message) {
+                alert(message)
+            },
+            error: function (message) {
+                alert(message)
+
+            }
+        });
+    });
+
+
+</script>
+</html>
