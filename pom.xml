@@ -37,7 +37,7 @@
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.37</version>
-      <scope>runtime</scope>
+      <!--<scope>runtime</scope>-->
     </dependency>
     <dependency>
       <!--jdbc连接池-->
