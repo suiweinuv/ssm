@@ -31,4 +31,4 @@ function percent(number1, number2) {
 }
 
 
-alert(33.33/100.00)
+
