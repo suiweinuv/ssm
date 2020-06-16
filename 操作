@@ -1,0 +1,2 @@
+左侧的按钮，一个是rerun（重启tomcat），一个是update（更新文件，不用重启，立刻生效）
+alt+insert：（或者右键）调出 get/set/重写equals()、hashcode()\toString()等

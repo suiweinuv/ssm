@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<!--src 属性规定在 iframe 中显示的文档的 URL。
+绝对 URL - 指向其他站点（比如 src="www.example.com/index.html"）
+相对 URL - 指向站点内的文件（比如 src="index.html"）-->
+<IFRAME id="downFileIFrame" src="about:blank" height="0" width="0" style="display:none;"></IFRAME>
+<button id = "download">下载文件</button>
+
+
+</body>
+</html>
+<script>
+    function downloadFile(){
+        //iframe的src值改变的时候，会刷新该iframe
+        $('#downFileIFrame').attr("src","../file/downloadFile?ATTACHMENT_NAME="+encodeURI(encodeURI("附件1.txt"), "utf-8"))
+    }
+    //不能写downloadFile()（不要加括号，加括号相当于执行这个函数，绑定返回结果），去掉括号，传的是函数引用
+    $("#download").on("click", downloadFile);
+
+</script>
