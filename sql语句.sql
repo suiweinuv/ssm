@@ -1,4 +1,6 @@
+/*
 数据库循环插入数据：
+*/
 declare i number;
 begin
  for i in 0 .. 50000 loop
@@ -9,3 +11,8 @@ begin
 		DBMS_OUTPUT.PUT_LINE('成功录入数据');
 		commit;
 end;
+
+/*
+更新某个字段，替换字符，注意“？”的中英文
+*/
+update sm_dict_grade set name = replace(name,'？','') where name like '%？%';

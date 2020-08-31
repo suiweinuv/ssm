@@ -29,7 +29,7 @@
         <!-- 配置 MyBaties 全局配置⽂件:mybatis-config.xml -->
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!-- 扫描 model 包 使⽤别名 -->
-        <property name="typeAliasesPackage" value="com.cm.model"/>
+        <property name="typeAliasesPackage" value="com.sw.model"/>
         <!-- 扫描 sql 配置⽂件:mapper 需要的 xml ⽂件 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
@@ -38,11 +38,11 @@
         <!-- 注⼊ sqlSessionFactory -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!-- 给出需要扫描 dao 接⼝包 -->
-        <property name="basePackage" value="com.cm.dao"/>
+        <property name="basePackage" value="com.sw.dao"/>
     </bean>
     <!--spring-service-->
     <!-- 扫描 service 包下所有使⽤注解的类型 -->
-    <context:component-scan base-package="com.cm.service"/>
+    <context:component-scan base-package="com.sw.service"/>
 
     <!-- 配置事务管理器 -->
     <bean id="transactionManager"

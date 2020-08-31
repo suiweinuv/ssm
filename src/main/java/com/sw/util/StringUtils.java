@@ -1,4 +1,4 @@
-package com.cm.util;
+package com.sw.util;
 
 public class StringUtils {
     //截取最后一位

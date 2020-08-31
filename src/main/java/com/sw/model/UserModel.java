@@ -1,4 +1,4 @@
-package com.cm.model;
+package com.sw.model;
 
 public class UserModel {
 	private int id;

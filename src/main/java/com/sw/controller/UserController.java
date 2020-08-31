@@ -1,7 +1,7 @@
-package com.cm.controller;
+package com.sw.controller;
 
-import com.cm.model.UserModel;
-import com.cm.service.UserService;
+import com.sw.model.UserModel;
+import com.sw.service.UserService;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

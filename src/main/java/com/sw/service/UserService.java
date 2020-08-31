@@ -1,7 +1,7 @@
-package com.cm.service;
+package com.sw.service;
 
-import com.cm.dao.UserDao;
-import com.cm.model.UserModel;
+import com.sw.dao.UserDao;
+import com.sw.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

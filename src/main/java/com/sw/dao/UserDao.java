@@ -1,6 +1,6 @@
-package com.cm.dao;
+package com.sw.dao;
 
-import com.cm.model.UserModel;
+import com.sw.model.UserModel;
 
 import java.util.List;
 

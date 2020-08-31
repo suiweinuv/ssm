@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sw.dao.DictDao">
+    <insert id="insertDict">
+        insert into sm_dict_grade values (SEQ_DICT_GRADE.NEXTVAL,#{name},#{pname},#{grade},'0','1')
+    </insert>
+    <select id="getIdByName" resultType="string">
+        select id from sm_dict_grade where name = #{name} and type =0 and grade =1
+    </select>
+
+</mapper>
